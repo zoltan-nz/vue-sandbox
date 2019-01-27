@@ -1,12 +1,26 @@
 <template>
-  <div id="app">
+  <div id="app" v-on:mousemove="mousePosition">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+
+    <div draggable="true" v-on:dra>
+      My Stuff
+    </div>
     <router-view />
   </div>
 </template>
+
+<script lang="ts">
+  export default {
+    methods: {
+      mousePosition(event: MouseEvent) {
+        console.log(event.clientX, event.clientY);
+      }
+    }
+  }
+</script>
 
 <style lang="scss">
 #app {
