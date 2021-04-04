@@ -1,0 +1,12 @@
+coverage
+dist
+package-lock.json
+.cache
+.idea
+.vscode
+.yarn.lock
+.npm
+src/shared/locales
+CHANGELOG.md
+.jest-cache
+.yarn-cache
